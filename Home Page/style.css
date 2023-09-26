@@ -95,6 +95,39 @@ header .container{
     transform: scale(1.05);
 }
 
+.hamburger-menu {
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.hamburger-menu .bar{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+
+}
+
+
+.bar::before, .bar::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.bar::before{
+    transform: translateY(-8px);
+}
+.bar::after{
+    transform: translateY(8px);
+}
+
 .btn {
     display: inline-block;
     padding: 0.9rem 1.9rem;
@@ -140,4 +173,21 @@ header .container{
 
 .showcase-area .btn{
     box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+}
+
+.person {
+    width: 100%;
+    transform: translate(5%, 15px);
+}
+
+@media screen and (max-width: 870px){
+  .showcase-area .container{
+    grid-template-columns: 1fr;
+  }
+}
+
+.person {
+    width: 100%;
+    transform: none;
+
 }
